@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Cigar.Core.Models;
+namespace Cigar.Parsers.Kernel.Models;
 
 public record RequestHeaders : IEnumerable<RequestHeader>
 {

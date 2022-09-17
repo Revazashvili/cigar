@@ -1,4 +1,4 @@
-namespace Cigar.Core.Models;
+namespace Cigar.Parsers.Kernel.Models;
 
 public enum RequestMethod
 {
