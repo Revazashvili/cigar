@@ -1,3 +1,13 @@
 namespace Cigar.Parsers.Kernel.Models;
 
-public record Execution(IEnumerable<Step> Steps);
+public class Execution
+{
+    public Execution() { }
+    
+    public Execution(IEnumerable<Step> steps)
+    {
+        Steps = steps;
+    }
+
+    public IEnumerable<Step> Steps { get; init; }
+}
