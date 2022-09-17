@@ -1,14 +1,23 @@
 using System.Collections;
+using Forbids;
 
 namespace Cigar.Parsers.Kernel.Models;
 
-public record RequestHeaders : IEnumerable<RequestHeader>
+public record RequestHeaders : ICollection<RequestHeader>
 {
     private readonly ICollection<RequestHeader> _headers;
 
     public RequestHeaders()
     {
         _headers = new List<RequestHeader>();
+    }
+    
+    public RequestHeaders(params RequestHeader[] headers)
+    {
+        Forbid.From.NullOrEmpty(headers);
+        _headers ??= new List<RequestHeader>();
+        foreach (var requestHeader in headers)
+            _headers.Add(requestHeader);
     }
     
     public RequestHeaders(ICollection<RequestHeader> headers)
