@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parsers", "Parsers", "{8306
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cigar.Parsers.Kernel", "src\Parsers\Cigar.Parsers.Kernel\Cigar.Parsers.Kernel.csproj", "{9BE3008F-0DD7-44FA-BA2C-342FEE919C57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cigar.Parsers.Yaml", "src\Parsers\Cigar.Parsers.Yaml\Cigar.Parsers.Yaml.csproj", "{0445968C-4A09-4885-9B17-07DC44467453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +28,13 @@ Global
 		{9BE3008F-0DD7-44FA-BA2C-342FEE919C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE3008F-0DD7-44FA-BA2C-342FEE919C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BE3008F-0DD7-44FA-BA2C-342FEE919C57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0445968C-4A09-4885-9B17-07DC44467453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0445968C-4A09-4885-9B17-07DC44467453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0445968C-4A09-4885-9B17-07DC44467453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0445968C-4A09-4885-9B17-07DC44467453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9BE3008F-0DD7-44FA-BA2C-342FEE919C57} = {830605DA-7B3A-4EE7-98AE-2DAE1EE6B170}
+		{0445968C-4A09-4885-9B17-07DC44467453} = {830605DA-7B3A-4EE7-98AE-2DAE1EE6B170}
 	EndGlobalSection
 EndGlobal
