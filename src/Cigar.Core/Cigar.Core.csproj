@@ -6,4 +6,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Parsers\Cigar.Parsers.Yaml\Cigar.Parsers.Yaml.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NBomber" Version="3.1.0" />
+      <PackageReference Include="NBomber.Contracts" Version="3.0.1" />
+      <PackageReference Include="NBomber.Http" Version="3.0.2" />
+    </ItemGroup>
+
 </Project>
