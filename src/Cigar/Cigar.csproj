@@ -7,4 +7,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Forbid" Version="1.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="YamlDotNet">
+        <HintPath>..\..\..\..\.nuget\packages\yamldotnet\12.0.0\lib\net6.0\YamlDotNet.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
 </Project>
