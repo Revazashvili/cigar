@@ -1,6 +1,6 @@
 using Cigar.Parsers;
 
-namespace Cigar.UnitTests;
+namespace Cigar.UnitTests.Parsers;
 
 public class YamlConfigurationParserTests
 {
@@ -8,7 +8,7 @@ public class YamlConfigurationParserTests
     public async Task Reads_Valid_Yaml_File()
     {
         var configurationParser = new YamlConfigurationParser();
-        var configuration = await configurationParser.ParseAsync("valid.yaml");
+        var configuration = await configurationParser.ParseAsync("./Files/valid.yaml");
         Assert.NotNull(configuration);
         Assert.NotNull(configuration.Execution);
         Assert.NotEmpty(configuration.Execution.Steps);
@@ -20,6 +20,6 @@ public class YamlConfigurationParserTests
     public async Task Throws_Exception_On_Invalid_Yaml_File()
     {
         var configurationParser = new YamlConfigurationParser();
-        await Assert.ThrowsAnyAsync<Exception>(async () => await configurationParser.ParseAsync("invalid.yaml"));
+        await Assert.ThrowsAnyAsync<Exception>(async () => await configurationParser.ParseAsync("./Files/invalid.yaml"));
     }
 }

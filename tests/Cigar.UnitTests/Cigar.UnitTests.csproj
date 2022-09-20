@@ -26,10 +26,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="invalid.yaml">
+      <None Update="Files\valid.yaml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="valid.yaml">
+      <None Update="Files\invalid.yaml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
