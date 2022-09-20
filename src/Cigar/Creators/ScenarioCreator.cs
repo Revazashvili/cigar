@@ -1,9 +1,9 @@
-using Cigar.Parsers.Kernel.Models;
+using Cigar.Models;
 using NBomber.CSharp;
 using NBomber.Plugins.Http.CSharp;
 using NBomber.Plugins.Network.Ping;
 
-namespace Cigar.Core;
+namespace Cigar.Creators;
 
 public static class ScenarioCreator
 {

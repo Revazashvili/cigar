@@ -1,14 +1,14 @@
-using Cigar.Parsers.Kernel.Models;
+using Cigar.Models;
 using NBomber.Contracts;
 using NBomber.Plugins.Http.CSharp;
 using Step = NBomber.CSharp.Step;
 
-namespace Cigar.Core;
+namespace Cigar.Creators;
 
 public static class StepCreator
 {
     public static IStep Create(ClientFactory<HttpClient> httpFactory,
-        Cigar.Parsers.Kernel.Models.Step step,string baseUrl)
+        Cigar.Models.Step step,string baseUrl)
     {
         //TODO: Iterations
         return Step.Create(step.Alias, httpFactory, async context =>

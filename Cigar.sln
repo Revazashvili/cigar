@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cigar.Core", "src\Cigar.Core\Cigar.Core.csproj", "{8CE1CD6D-172D-48A3-9CD4-179BEE82EF69}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4176023E-52B5-4409-94E7-1F52617043E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9212566C-D19A-494C-B9CA-91979C20EB12}"
@@ -22,10 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CE1CD6D-172D-48A3-9CD4-179BEE82EF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CE1CD6D-172D-48A3-9CD4-179BEE82EF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CE1CD6D-172D-48A3-9CD4-179BEE82EF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CE1CD6D-172D-48A3-9CD4-179BEE82EF69}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60B9286B-B1A4-49B2-A984-B28F767794CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{60B9286B-B1A4-49B2-A984-B28F767794CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60B9286B-B1A4-49B2-A984-B28F767794CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,7 +30,6 @@ Global
 		{33B0C210-997D-4FD8-ABBD-C35176FCA885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8CE1CD6D-172D-48A3-9CD4-179BEE82EF69} = {4176023E-52B5-4409-94E7-1F52617043E6}
 		{60B9286B-B1A4-49B2-A984-B28F767794CE} = {4176023E-52B5-4409-94E7-1F52617043E6}
 		{33B0C210-997D-4FD8-ABBD-C35176FCA885} = {9212566C-D19A-494C-B9CA-91979C20EB12}
 	EndGlobalSection
