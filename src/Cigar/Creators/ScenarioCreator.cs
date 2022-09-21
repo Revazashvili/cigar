@@ -1,24 +1,18 @@
 using Cigar.Models;
+using NBomber.Contracts;
 using NBomber.CSharp;
 using NBomber.Plugins.Http.CSharp;
-using NBomber.Plugins.Network.Ping;
 
 namespace Cigar.Creators;
 
 public static class ScenarioCreator
 {
-    public static void Create(Configuration configuration)
+    public static Scenario Create(string fileName,Configuration configuration)
     {
         var httpFactory = HttpClientFactory.Create();
         var steps = configuration.Execution.Steps.Select(s => StepCreator.Create(httpFactory,s,configuration.BaseUrl)).ToArray();
-        var scenario = ScenarioBuilder
-            .CreateScenario("test", steps)//TODO: Name
+        return ScenarioBuilder
+            .CreateScenario(fileName, steps)
             .WithLoadSimulations(Simulation.InjectPerSec(100, TimeSpan.FromSeconds(30)));
-    
-        var pingPlugin = new PingPlugin(PingPluginConfig.CreateDefault(configuration.BaseUrl));
-        NBomberRunner
-            .RegisterScenarios(scenario)
-            .WithWorkerPlugins(pingPlugin)
-            .Run();
     }
 }

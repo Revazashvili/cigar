@@ -11,7 +11,7 @@ public static class StepCreator
         Cigar.Models.Step step,string baseUrl)
     {
         //TODO: Iterations
-        return Step.Create(step.Alias, httpFactory, async context =>
+        return Step.Create(step.Alias, httpFactory, context =>
         {
             var method = step.Request.Method ?? RequestMethod.Get;
             var request = Http.CreateRequest(method.ToString().ToUpper(), $"{baseUrl}{step.Request.Url}");
@@ -21,7 +21,7 @@ public static class StepCreator
             if (!string.IsNullOrEmpty(step.Request.Body))
                 request.WithBody(new StringContent(step.Request.Body!));
 
-            return await Http.Send(request, context);
+            return Http.Send(request, context);
         });
     }
 }
