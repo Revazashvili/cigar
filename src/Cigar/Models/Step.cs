@@ -4,14 +4,12 @@ public class Step
 {
     public Step() { }
     
-    public Step(string description,Request request,string? alias = null)
+    public Step(Request request,string? alias = null)
     {
-        Description = description;
-        Request = request;
         Alias = alias;
+        Request = request;
     }
 
-    public string Description { get; init; }
-    public Request Request { get; init; }
     public string? Alias { get; init; }
+    public Request Request { get; init; }
 }

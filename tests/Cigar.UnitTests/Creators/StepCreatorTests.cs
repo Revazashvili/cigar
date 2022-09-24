@@ -10,7 +10,7 @@ public class StepCreatorTests
     public void Should_Create_Scenario_Test()
     {
         var httpFactory = HttpClientFactory.Create();
-        var step = new Step("test", new Request
+        var step = new Step(new Request
         {
             Url = "/customers",
             Method = RequestMethod.Get,

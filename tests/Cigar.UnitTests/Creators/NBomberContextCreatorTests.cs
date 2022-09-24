@@ -19,7 +19,6 @@ public class NBomberContextCreatorTests
                     new Step
                     {
                         Alias = "test",
-                        Description = "test",
                         Request = new Request
                         {
                             Url = "/customers"

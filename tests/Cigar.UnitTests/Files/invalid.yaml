@@ -7,7 +7,7 @@ execution:
       alias: step1
 
     -
-      description: second step
+      alias: second step
       request:
         url: /second
         method: Get
@@ -19,8 +19,7 @@ execution:
             key: x-api-key
             value: 12931723712983718923712
         body: '{ "id":"1","name":"john"}'
-      alias:
   -
-    description: third step
+    alias: third step
     request:
       url: /third
