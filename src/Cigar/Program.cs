@@ -7,8 +7,14 @@ using NBomber.CSharp;
 
 if (!args.Any())
 {
-    // TODO: print some message
-    Console.WriteLine("some logo");
+    const string logo = @"      _                  
+  ___(_) __ _  __ _ _ __ 
+ / __| |/ _` |/ _` | '__|
+| (__| | (_| | (_| | |   
+ \___|_|\__, |\__,_|_|   
+        |___/            
+";
+    Console.WriteLine(logo);
     return;
 }
 
