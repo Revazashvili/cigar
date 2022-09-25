@@ -10,10 +10,15 @@ public static class ScenarioCreator
     public static Scenario Create(string fileName, Configuration configuration)
     {
         var httpFactory = HttpClientFactory.Create();
-        var steps = configuration.Execution.Steps.Select(s => StepCreator.Create(httpFactory, s, configuration.BaseUrl))
-            .ToArray();
+        var steps = new List<IStep>();
+        foreach (var executionStep in configuration.Execution.Steps)
+        {
+            steps.AddRange(Enumerable.Range(1, configuration.Iterations)
+                .Select(_ => StepCreator.Create(httpFactory, executionStep, configuration.BaseUrl)));
+        }
+        
         return ScenarioBuilder
-            .CreateScenario(fileName, steps)
+            .CreateScenario(fileName, steps.ToArray())
             .WithLoadSimulations(Simulation.InjectPerSec(100, TimeSpan.FromSeconds(30)));
     }
 }
