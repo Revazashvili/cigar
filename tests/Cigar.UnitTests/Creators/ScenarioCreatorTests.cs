@@ -30,5 +30,6 @@ public class ScenarioCreatorTests
         var scenario = ScenarioCreator.Create("sample", configuration);
         Assert.NotNull(scenario);
         Assert.Equal("sample", scenario.ScenarioName);
+        Assert.Equal(5, scenario.Steps.Length);
     }
 }
