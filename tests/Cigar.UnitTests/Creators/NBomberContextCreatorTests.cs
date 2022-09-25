@@ -30,6 +30,6 @@ public class NBomberContextCreatorTests
 
         var nBomberContext = NBomberContextCreator.Create("sample", configuration);
         Assert.NotNull(nBomberContext);
-        Assert.Equal("sample",nBomberContext.TestName);
+        Assert.Equal("sample", nBomberContext.TestName);
     }
 }

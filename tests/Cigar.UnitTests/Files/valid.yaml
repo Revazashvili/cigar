@@ -2,25 +2,20 @@ base_url: http://localhost:8080
 iterations: 5
 execution:
   steps:
-    -
-      alias: first step
+    - alias: first step
       request:
         url: /first
 
-    -
-      alias: second step
+    - alias: second step
       request:
         url: /second
         method: Get
         headers:
-          -
-            key: Authorization
+          - key: Authorization
             value: some token
-          -
-            key: x-api-key
+          - key: x-api-key
             value: 12931723712983718923712
         body: '{ "id":"1","name":"john"}'
-    -
-      alias: third step
+    - alias: third step
       request:
         url: /third

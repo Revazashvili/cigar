@@ -6,20 +6,14 @@ execution:
         url: /first
       alias: step1
 
-    -
-      alias: second step
+    - alias: second step
       request:
         url: /second
         method: Get
         headers:
-          -
-            key: Authorization
-            value: some token
-          -
-            key: x-api-key
-            value: 12931723712983718923712
-        body: '{ "id":"1","name":"john"}'
-  -
-    alias: third step
-    request:
-      url: /third
+          - Authorization: some token
+          - x-api-key: 12931723712983718923712
+        body: 1234
+    - alias: third step
+      request:
+        url: /third

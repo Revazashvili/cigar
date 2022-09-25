@@ -15,11 +15,12 @@ public class YamlConfigurationParserTests
 
         Assert.Equal("http://localhost:8080", configuration.BaseUrl);
     }
-    
+
     [Fact]
     public async Task Throws_Exception_On_Invalid_Yaml_File()
     {
         var configurationParser = new YamlConfigurationParser();
-        await Assert.ThrowsAnyAsync<Exception>(async () => await configurationParser.ParseAsync("./Files/invalid.yaml"));
+        await Assert.ThrowsAnyAsync<Exception>(async () =>
+            await configurationParser.ParseAsync("./Files/invalid.yaml"));
     }
 }

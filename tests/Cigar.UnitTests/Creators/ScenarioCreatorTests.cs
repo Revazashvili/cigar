@@ -29,6 +29,6 @@ public class ScenarioCreatorTests
         };
         var scenario = ScenarioCreator.Create("sample", configuration);
         Assert.NotNull(scenario);
-        Assert.Equal("sample",scenario.ScenarioName);
+        Assert.Equal("sample", scenario.ScenarioName);
     }
 }

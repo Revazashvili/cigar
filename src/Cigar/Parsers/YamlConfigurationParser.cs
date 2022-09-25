@@ -10,6 +10,8 @@ public class YamlConfigurationParser : IConfigurationParser
         .WithNamingConvention(UnderscoredNamingConvention.Instance)
         .Build();
 
-    public async Task<Configuration> ParseAsync(string path) =>
-        _deserializer.Deserialize<Configuration>(await File.ReadAllTextAsync(path));
+    public async Task<Configuration> ParseAsync(string path)
+    {
+        return _deserializer.Deserialize<Configuration>(await File.ReadAllTextAsync(path));
+    }
 }

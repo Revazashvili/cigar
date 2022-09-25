@@ -10,15 +10,18 @@ public class StepCreatorTests
     public void Should_Create_Scenario_Test()
     {
         var httpFactory = HttpClientFactory.Create();
-        var step = new Step(new Request
+        var step = new Step
         {
-            Url = "/customers",
-            Method = RequestMethod.Get,
-            Headers = new RequestHeaders()
-        }, "test");
-        var baseUrl = "http://localhost:80";
-        var scenarioStep = StepCreator.Create(httpFactory,step,baseUrl);
+            Request = new Request
+            {
+                Url = "/customers",
+                Method = "GET"
+            },
+            Alias = "test"
+        };
+        const string baseUrl = "http://localhost:80";
+        var scenarioStep = StepCreator.Create(httpFactory, step, baseUrl);
         Assert.NotNull(scenarioStep);
-        Assert.Equal("test",scenarioStep.StepName);
+        Assert.Equal("test", scenarioStep.StepName);
     }
 }
