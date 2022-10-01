@@ -13,7 +13,7 @@ public static class ScenarioCreator
         var steps = new List<IStep>();
         foreach (var executionStep in configuration.Execution.Steps)
             steps.AddRange(Enumerable.Range(1, configuration.Iterations)
-                .Select(_ => StepCreator.Create(httpFactory, executionStep, configuration.BaseUrl)));
+                .Select(i => StepCreator.Create(httpFactory, executionStep, configuration.BaseUrl,$"{executionStep.Alias}_{i}")));
 
         return ScenarioBuilder
             .CreateScenario(fileName, steps.ToArray())

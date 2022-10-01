@@ -6,9 +6,9 @@ namespace Cigar.Creators;
 
 public static class StepCreator
 {
-    public static IStep Create(ClientFactory<HttpClient> httpFactory, Step step, string baseUrl)
+    public static IStep Create(ClientFactory<HttpClient> httpFactory, Step step, string baseUrl,string? name = null)
     {
-        return NBomber.CSharp.Step.Create(step.Alias, httpFactory, context =>
+        return NBomber.CSharp.Step.Create(name ?? step.Alias, httpFactory, context =>
         {
             var request = Http.CreateRequest(step.Request.Method?.ToUpper() ?? "GET", $"{baseUrl}{step.Request.Url}");
 
