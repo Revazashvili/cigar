@@ -25,7 +25,6 @@ if (!File.Exists(filePath))
     return;
 }
 
-Console.WriteLine(Path.GetExtension(filePath));
 if (Path.GetExtension(filePath) != ".yaml")
 {
     Console.WriteLine("please provide yaml file");
