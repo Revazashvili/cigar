@@ -6,7 +6,7 @@ namespace Cigar.Creators;
 
 public static class StepCreator
 {
-    public static IStep Create( ClientFactory<HttpClient> httpFactory,Step step,string baseUrl)
+    public static IStep Create(ClientFactory<HttpClient> httpFactory, Step step, string baseUrl)
     {
         return NBomber.CSharp.Step.Create(step.Alias, httpFactory, context =>
         {
